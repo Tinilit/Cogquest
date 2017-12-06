@@ -1,0 +1,320 @@
+*{
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+}
+
+.material-icons{
+    font-family: 'Material Icons'!important;
+}
+
+.mat-icon-cust{
+    width: auto;
+    height: auto;
+    font-size: 5em;
+    color: #3f51b5;
+}
+
+.wrapper{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.head-text{
+    font-size: 36px;
+}
+
+.head-text-sm{
+    font-size: 20px;
+}
+
+.full-width{
+    width: 100%;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.col-50{
+    width: 50%;
+    float: left;
+}
+
+.col-33{
+    width: 33.3333%;
+    float: left;
+}
+
+.clearfix{
+    clear: both;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.back-gray{
+    padding: 15px 0;
+    background: rgba(197,202,233,.3);
+}
+
+.back-gray .text-center{
+    padding: 0 15px;
+}
+
+header{
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    background: #3f51b5;
+}
+
+.home-logo{
+    text-decoration: none;
+    color: hsla(0,0%,100%,.87);
+    margin: 18px 0;
+    display: inline-block;
+}
+
+.home-menu{
+    padding: 0;
+    text-align: right;
+    list-style-type: none;
+    width: 90%;
+    float: right;
+    margin: 10px 0;
+}
+
+.home-menu li{
+    display: inline-block;
+}
+
+.home-menu li a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: hsla(0,0%,100%,.87);
+}
+
+.menu-fix{
+    height: 56px;
+}
+
+.hovered{
+    display: block;
+    text-decoration: none;
+    background: #999;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.hovered:hover{
+    background: #3f51b5;
+}
+
+.hovered button{
+    background: #3f51b5;
+}
+
+.desc{
+    width: 450px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.desc .head-hext-sm{
+    display: inline-block;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 32px;
+    color: #fff;
+    line-height: 4.5;
+}
+
+.test{
+    display: block;
+    width: 20%;
+    height: 150px;
+    float: left;
+    margin-top: 5px;
+}
+
+.test .head-hext-sm{
+    display: inline-block;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 17px;
+    color: #fff;
+    line-height: 8.25;
+}
+
+footer{
+    padding: 10px;
+    background: #3f51b5;
+}
+
+footer .copyright{
+    font-size: 12px;
+    color: hsla(0,0%,100%,.87);
+}
+
+.go-top{
+    position: fixed;
+    background: #3f51b5;
+    bottom: 58px;
+    right: 30px;
+    padding: 15px;
+    color: hsla(0,0%,100%,.87);
+    z-index: 999;
+}
+
+.go-top:hover{
+    cursor: pointer;
+}
+
+.menu-button{
+    display: none;
+}
+
+.socials{
+    list-style: none;
+    padding: 0;
+    margin-top: 130px;
+}
+
+.socials li{
+    display: inline-block;
+
+}
+.socials li:hover a{
+    background: #3f51b5;
+    color: hsla(0,0%,100%,.87);
+}
+
+.socials li a{
+    display: inline-block;
+    font-size: 18px;
+    color: #3f51b5;
+    width: 48px;
+    height: 46px;
+    line-height: 2.6;
+    transition: 0.3s ease;
+}
+
+.tel{
+    margin: 40px 0;
+}
+
+.tel a{
+    color: #111;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.test-cat .head-text-sm{
+    display: block;
+    text-decoration: none;
+    color: #3f51b5;
+    margin: 30px 0;
+}
+
+.test-cat i{
+    color: #3f51b5;
+}
+
+#desktop, #about, #available{
+    padding-top: 1px;
+}
+
+@media (min-width: 601px) and (max-width: 1200px){
+    .wrapper{
+        width: auto;
+        margin: 0 15px;
+    }
+
+    .test{
+        width: 33.333%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .test{
+        width: 100%;
+    }
+
+    .wrapper{
+        padding: 15px;
+        width: unset;
+    }
+
+    .contact-form-wrap{
+        width: unset;
+        padding: 0 15px;
+    }
+
+    .col-33{
+        width: 100%;
+    }
+
+    .col-50{
+        width: 100%;
+    }
+
+    .desc{
+        width: 100%;
+    }
+
+    .home-menu{
+        display: none;
+        float: unset;
+        width: 100%;
+        margin: 0;
+    }
+
+    .home-menu li{
+        display: block;
+        text-align: center;
+    }
+
+    .home-logo{
+        margin: 15px 0px;
+    }
+
+    .menu-button{
+        display: block;
+        color: hsla(0,0%,100%,.87);
+        float: right;
+        margin: 14px 15px;
+        font-size: 20px;
+    }
+
+    .socials{
+        margin-top: 50px;
+    }
+
+    .go-top{
+        bottom: 91px;
+        right: 0;
+    }
+
+    .text-right{
+        text-align: center;
+    }
+}
+
+@media (min-width: 740px) and (max-width: 880px){
+    .home-menu .mat-button{
+        padding: 0 35px;
+    }
+}
+
+@media (min-width: 881px) and (max-width: 1080px){
+    .home-menu .mat-button{
+        padding: 0 40px;
+    }
+}
+
+@media (min-width: 1081px) and (max-width: 1200px){
+    .home-menu .mat-button{
+        padding: 0 10px;
+    }
+}

@@ -1,0 +1,16 @@
+<nav mat-tab-nav-bar>
+  <a mat-tab-link [routerLink]="'info'" routerLinkActive #inforla="routerLinkActive" [active]="inforla.isActive">
+    Info
+  </a>
+  <a mat-tab-link *ngIf="this.roles.indexOf('Provider')==-1" [routerLink]="'my-tests'" routerLinkActive #mytestsrla="routerLinkActive" [active]="mytestsrla.isActive">
+    Tests
+  </a>
+  <a mat-tab-link *ngIf="this.roles.indexOf('Provider')!=-1" [routerLink]="'tests'" routerLinkActive #testsrla="routerLinkActive" [active]="testsrla.isActive">
+    Provider's Tests
+  </a>
+  <a mat-tab-link *ngIf="this.roles.indexOf('Provider')!=-1" [routerLink]="'user-tests'" routerLinkActive #usertestsrla="routerLinkActive" [active]="usertestsrla.isActive">
+    Provider's User-Tests
+  </a>
+</nav>
+
+<router-outlet></router-outlet>

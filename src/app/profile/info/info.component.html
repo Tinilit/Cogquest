@@ -1,0 +1,224 @@
+<mat-card *ngIf='profile'>
+  <form class="form-container" #form='ngForm' (ngSubmit)='save()'>
+
+    <mat-form-field class="full-width">
+      <input matInput placeholder="First name" [(ngModel)]="profile.firstName" name="firstName">
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Last Name" [(ngModel)]="profile.lastName" name="lastName">
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input matInput [matDatepicker]="picker" placeholder="Date of birth" name="birthDate" [(ngModel)]="profile.birthDate">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-datepicker #picker></mat-datepicker>
+
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Address" name="address" [(ngModel)]="profile.address">
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-select class="full-width" placeholder="Education" name="education" [(ngModel)]="profile.education">
+        <mat-option value="Some High School">
+          Some High School
+        </mat-option>
+        <mat-option value="High School Grad">
+          High School Grad
+        </mat-option>
+        <mat-option value="Some University">
+          Some University
+        </mat-option>
+        <mat-option value="Univ Undergraduate">
+          Univ Undergraduate
+        </mat-option>
+        <mat-option value="Graduate School">
+          Graduate School
+        </mat-option>
+        <mat-option value="PhD">
+          PhD
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-select class="full-width" placeholder="Level of Income:" name="lvlOfIncome" [(ngModel)]="profile.income">
+        <mat-option value="less than 10 000">
+          less than 10 000
+        </mat-option>
+        <mat-option value="10 001 -- 25 000">
+          10 001 -- 25 000
+        </mat-option>
+        <mat-option value="25 001 -- 50 000">
+          25 001 -- 50 000
+        </mat-option>
+        <mat-option value="25 001 -- 50 000">
+          25 001 -- 50 000
+        </mat-option>
+        <mat-option value="more than 100 000">
+          more than 100 000
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-select class="full-width" placeholder="Dominant Hand" name="dominantHand" [(ngModel)]="profile.hand">
+        <mat-option value="left">
+          left
+        </mat-option>
+        <mat-option value="right">
+          right
+        </mat-option>
+        <mat-option value="ambidextrous">
+          ambidextrous
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-select class="full-width" placeholder="Ethnicity" name="ethnicity" [(ngModel)]="profile.ethnisity">
+        <mat-option value="White/Non-hispanic">
+          White/Non-hispanic
+        </mat-option>
+        <mat-option value="African American/African origin">
+          African American/African origin
+        </mat-option>
+        <mat-option value="Hispanic or Latino">
+          Hispanic or Latino
+        </mat-option>
+        <mat-option value="Asian">
+          Asian
+        </mat-option>
+        <mat-option value="American Indian or Alaskan Native">
+          American Indian or Alaskan Native
+        </mat-option>
+        <mat-option value="Native Hawaiian or Pacific Islander">
+          Native Hawaiian or Pacific Islander
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-select class="full-width" placeholder="Marital status" name="maritalStatus" [(ngModel)]="profile.maritalStatus">
+        <mat-option value="Single">
+          Single
+        </mat-option>
+        <mat-option value="Married">
+          Married
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-select class="full-width" placeholder="How many hours a week do you exercise?" name="lvlExercise" [(ngModel)]="profile.exercise">
+        <mat-option value="0-1">
+          0-1
+        </mat-option>
+        <mat-option value="2-3">
+          2-3
+        </mat-option>
+        <mat-option value="4-5">
+          4-5
+        </mat-option>
+        <mat-option value="6-7">
+          6-7
+        </mat-option>
+        <mat-option value="8-9">
+          8-9
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-select class="full-width" placeholder="How would you rate your self-esteem:" name="lvlSelfEsteem" [(ngModel)]="profile.selfEsteem">
+        <mat-option value="Low">
+          Low
+        </mat-option>
+        <mat-option value="Below Avarage">
+          Below Avarage
+        </mat-option>
+        <mat-option value="Average">
+          Average
+        </mat-option>
+        <mat-option value="Above Average">
+          Above Average
+        </mat-option>
+        <mat-option value="High">
+          High
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-select class="full-width" placeholder="How would you rate your overall health:" name="lvlOverallHealth" [(ngModel)]="profile.selfHealth">
+        <mat-option value="Poor">
+          Poor
+        </mat-option>
+        <mat-option value="Below Avarage">
+          Below Avarage
+        </mat-option>
+        <mat-option value="Average">
+          Average
+        </mat-option>
+        <mat-option value="Above Average">
+          Above Average
+        </mat-option>
+        <mat-option value="Excellent">
+          Excellent
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-radio-group class="full-width" [(ngModel)]="profile.gender" name='gender'>
+      Gender:
+      <mat-radio-button class="radio-button" value="male">
+        Male
+      </mat-radio-button>
+      <mat-radio-button class="radio-button" value="female">
+        Female
+      </mat-radio-button>
+    </mat-radio-group>
+
+    <mat-checkbox class="full-width" [(ngModel)]="profile.firstLanguage" name='firstLanguage'>Is English your first language?</mat-checkbox>
+
+    <div class="full-width">
+      <mat-checkbox>Have you ever had a head injury?</mat-checkbox>
+      <mat-form-field class="input-small">
+        <input matInput placeholder="Count" [(ngModel)]="profile.injuryCount" name="injuryCount">
+      </mat-form-field>
+    </div>
+
+    <mat-checkbox class="full-width">Are you currently taking any medications?</mat-checkbox>
+
+    <mat-form-field class="double-width">
+      <input matInput placeholder="Medications" [(ngModel)]="profile.medName" name="commentMedication">
+    </mat-form-field>
+
+    <mat-form-field class="screen-width">
+      <mat-select placeholder="How many hours a week do you engage in stimulating activity such as follows: reading, writing, playing cards, intellectual conversations, computer use:"
+        [(ngModel)]="profile.brainActivity" name="lvlRest">
+        <mat-option value="0-5">
+          0-5
+        </mat-option>
+        <mat-option value="6-10">
+          6-10
+        </mat-option>
+        <mat-option value="11-15">
+          11-15
+        </mat-option>
+        <mat-option value="16-20">
+          16-20
+        </mat-option>
+        <mat-option value="more than 20">
+          more than 20
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="full-with text-right">
+      <button mat-raised-button type="submit" name="save">Save</button>
+    </div>
+  </form>
+</mat-card>

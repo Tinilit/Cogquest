@@ -1,0 +1,82 @@
+.form-container {
+  width: 100%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.full-width {
+  width: 400px;
+  display: inline-block;
+}
+
+.double-width {
+  width: 800px;
+}
+
+.screen-width{
+  width: 100%;
+}
+
+.half-width{
+  width: 50%;
+}
+
+.date-time {
+  width: 33%;
+}
+
+.radio-button {
+margin: 5px;
+}
+
+.selected-value {
+margin: 15px 0;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.select-text {
+  color: rgba(0,0,0,.38);
+}
+
+.input-small{
+  width: 100px;
+  margin-left: 20px;
+}
+
+.mat-card{
+  padding: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .form-container {
+      width: 100%;
+  }
+
+  .half-width{
+      width: 100%;
+  }
+
+  .double-width{
+    width: 100%;
+  }
+
+  .full-width{
+    width: 100%;
+    display: block;
+  }
+
+  td {
+      display: block;
+  }
+
+  .date-time {
+      width: 100%;
+  }
+}

@@ -1,0 +1,8 @@
+kb-page-slider{
+    height: 90vh;
+}
+.slider-img{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

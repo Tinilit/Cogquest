@@ -1,0 +1,39 @@
+<div class="form-wrapper">
+  <div class="form-container">
+    <form class="register-form" (submit)="register($event)">
+
+      <div class="form-header">
+        <p class="head-text">Register</p>
+      </div>
+
+      <div class="form-body">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Login" required>
+        </mat-form-field>
+
+        <table class="full-width" cellspacing="0"><tr>
+          <td><mat-form-field class="full-width">
+            <input matInput placeholder="First name" required>
+          </mat-form-field></td>
+          <td><mat-form-field class="full-width">
+            <input matInput placeholder="Last Name" required>
+          </mat-form-field></td>
+        </tr></table>
+
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Email" required>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Password" type="password" required>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Confirm password" type="password" required>
+        </mat-form-field>
+
+        <div class="text-right">
+          <button type="submit" mat-raised-button>Continue</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

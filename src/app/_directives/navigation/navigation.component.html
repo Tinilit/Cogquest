@@ -1,0 +1,26 @@
+<div class="nav-container">
+  <nav>
+    <ul>
+      <li [routerLinkActive]="['active-link']">
+        <a class="element" [routerLink]="['/home']">
+          <mat-icon>home</mat-icon> Home
+        </a>
+      </li>
+      <li [routerLinkActive]="['active-link']">
+        <a class="element" [routerLink]="['/dashboard']">
+          <mat-icon>dashboard</mat-icon> Dashboard
+        </a>
+      </li>
+      <li [routerLinkActive]="['active-link']">
+        <a class="element" [routerLink]="['/profile']">
+          <mat-icon>person</mat-icon> Profile
+        </a>
+      </li>
+      <li>
+        <a class="element" href='' (click)="logout()">
+          <mat-icon>input</mat-icon> Logout
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

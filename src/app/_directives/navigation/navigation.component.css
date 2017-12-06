@@ -1,0 +1,67 @@
+.nav-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-container nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-container nav ul li{
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  margin: 0;
+  padding: 0;
+  border-color: rgba(0,0,0,.06);
+  color: rgba(0,0,0,.54);
+}
+
+.nav-container nav ul li a{
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+  text-decoration: none;
+  outline: none;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 47px;
+  text-decoration: none;
+  transition: all .3s;
+  padding: 0 16px;
+  position: relative;
+  color: rgba(0,0,0,.54);
+}
+
+.nav-container nav ul li a:hover,
+.nav-container nav ul li a:focus{
+  background: #fafafa;
+  color: #3f51b5;
+}
+
+.nav-container nav ul li a .mat-icon{
+  height: 30px;
+  width: 30px;
+}
+
+.nav-container nav ul .dropdown{
+  border-bottom-width: 0;
+}
+
+.nav-container nav ul .dropdown > a{
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+  padding: 0 16px;
+  background: rgba(0,0,0,.32);
+  color: hsla(0,0%,100%,.87);
+}
+
+.nav-container nav ul .dropdown > a:hover,
+.nav-container nav ul .dropdown > a:focus{
+  background: rgba(0,0,0,.32);
+  color: hsla(0,0%,100%,.87);
+}

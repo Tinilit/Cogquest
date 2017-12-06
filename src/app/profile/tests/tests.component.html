@@ -1,0 +1,32 @@
+<div class="container mat-elevation-z8">
+  <div class="header">
+    <mat-form-field floatPlaceholder="never">
+      <input matInput #filter placeholder="Filter">
+    </mat-form-field>
+  </div>
+  <mat-table #table [dataSource]="dataSource" matSort>
+    <ng-container cdkColumnDef="testType">
+      <mat-header-cell *cdkHeaderCellDef mat-sort-header> Test Type </mat-header-cell>
+      <mat-cell *cdkCellDef="let row"> {{row.test.testType.name}} </mat-cell>
+    </ng-container>
+    <ng-container cdkColumnDef="providerId">
+      <mat-header-cell *cdkHeaderCellDef mat-sort-header> providerId </mat-header-cell>
+      <mat-cell *cdkCellDef="let row"> {{row.test.providerId}} </mat-cell>
+    </ng-container>
+    <ng-container cdkColumnDef="actions">
+      <mat-header-cell *cdkHeaderCellDef mat-sort-header> </mat-header-cell>
+      <mat-cell *cdkCellDef="let row">
+        <button *ngIf='true' mat-button (click)='startTest(row)'>
+              <mat-icon mat-48>play_arrow</mat-icon>
+              <span>Start</span>
+        </button>
+        <button *ngIf='false' mat-button (click)='showResults(row)'>
+          <mat-icon>assignment</mat-icon>
+          <span>results</span>
+        </button>
+      </mat-cell>
+    </ng-container>
+    <mat-header-row *cdkHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *cdkRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

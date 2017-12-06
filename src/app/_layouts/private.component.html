@@ -1,0 +1,33 @@
+<mat-sidenav-container fullscreen>
+
+  <mat-sidenav #sidenav mode="over">
+    <navigation></navigation>
+  </mat-sidenav>
+
+  <mat-toolbar color="primary">
+    <span class="logo">CogQuiz</span>
+
+    <div class="mat-toolbar-right">
+
+      <button mat-icon-button routerLink="/profile">
+        <mat-icon>person</mat-icon>
+      </button>
+
+      <button mat-icon-button (click)='logout()'>
+        <mat-icon>exit_to_app</mat-icon>
+      </button>
+
+    </div>
+    
+  </mat-toolbar>
+
+  <a class="menu-button" mat-button (click)='sidenav.open();' (clickOutside)="sidenav.close()">
+    <mat-icon class="hide-xs">play_arrow</mat-icon>
+    <mat-icon class="show-xs">more_vert</mat-icon>
+  </a>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+
+</mat-sidenav-container>

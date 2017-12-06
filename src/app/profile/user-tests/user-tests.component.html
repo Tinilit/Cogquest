@@ -1,0 +1,40 @@
+<div class="container mat-elevation-z8">
+  <div class="header">
+    <button mat-button (click)="createUserTests()">
+      <mat-icon>add</mat-icon>Add
+    </button>
+    <mat-form-field floatPlaceholder="never">
+      <input matInput placeholder="Filter">
+    </mat-form-field>
+  </div>
+
+  <mat-table *ngIf="dataSource" #usersTestTable [dataSource]="dataSource">
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+    <!-- Test Type Column -->
+    <ng-container matColumnDef="testType">
+      <mat-header-cell *matHeaderCellDef> Type </mat-header-cell>
+      <mat-cell *matCellDef="let item"> {{ item.test.testType.name }} </mat-cell>
+    </ng-container>
+
+    <!-- Test Name Column -->
+    <ng-container matColumnDef="testName">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let item"> {{ item.test.name }} </mat-cell>
+    </ng-container>
+
+    <!-- User Name Column -->
+    <ng-container matColumnDef="userName">
+      <mat-header-cell *matHeaderCellDef> User </mat-header-cell>
+      <mat-cell *matCellDef="let item"> {{ item.userProfile.firstName }} {{ item.userProfile.lastName }} </mat-cell>
+    </ng-container>
+
+    <!-- Test Creation Date Column -->
+    <ng-container matColumnDef="testDate">
+      <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+      <mat-cell *matCellDef="let item"> {{ 'Not received from server' }} </mat-cell>
+    </ng-container>
+
+  </mat-table>
+</div>

@@ -1,0 +1,1 @@
+export type Roles = "Provider" | "User" | "Admin";
